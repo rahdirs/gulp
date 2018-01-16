@@ -22,7 +22,7 @@ gulp-sourcemaps | Getting line numbers in browser
 gulp-rename | Renamed the files 
 gulp-livereload | Reload the css file and page 
 
-#### npm commmand
+#### npm commmands
 ~~~
 npm install gulp-sass --save-dev 
 npm install gulp-minify-css --save-dev 
@@ -32,4 +32,9 @@ npm install gulp-uglify --save-dev
 npm install gulp-useref --save-dev 
 npm install gulp-sourcemaps --save-dev 
 npm install gulp-rename --save-dev 
+~~~
+
+#### Single Line Installation:
+~~~
+npm install gulp --save-dev npm install gulp-sass --save-dev npm install gulp-minify-css --save-dev npm install gulp-cssnano --save-dev npm install gulp-if --save-dev npm install gulp-uglify --save-dev npm install gulp-useref --save-dev npm install gulp-sourcemaps --save-dev npm install gulp-rename --save-dev 
 ~~~
