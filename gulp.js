@@ -18,6 +18,11 @@ gulp.task('css-style', function () {
 // Javascript file
 gulp.task('js-app', function () {
   gulp.src('common/js/app.js')
+	.pipe(strip())
+    .pipe(rename({
+      basename: 'main'
+    }))
+	.pipe(gulp.dest('common/js/'))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
