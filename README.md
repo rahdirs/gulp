@@ -19,7 +19,7 @@ gulp-if | Add condition to the flow
 gulp-uglify | Concatenate the files instead of using gulp-concat 
 gulp-useref | File concatenation but not minification 
 gulp-sourcemaps | Getting line numbers in browser 
-gulp-rename | Renamed the files 
+gulp-rename | Renamed the files (dirname, basename, prefix, suffix, extname)
 gulp-livereload | Reload the css file and page 
 gulp-strip-comments | Removes comments from JSON, JavaScript, CSS, HTML, etc.
 
@@ -68,11 +68,11 @@ The above css task generate both minified and css file. You can change the desti
 ```javascript
 gulp.task('js-app', function () {
   gulp.src('common/js/app.js')
-	.pipe(strip())
+    .pipe(strip())
     .pipe(rename({
       basename: 'main'
     }))
-	.pipe(gulp.dest('common/js/'))
+    .pipe(gulp.dest('common/js/'))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
