@@ -48,7 +48,7 @@ npm install gulp --save-dev npm install gulp-sass --save-dev npm install gulp-mi
 
 ### Gulp Configuration
 
-Include the plugins in yout gulp configuration file.
+Include the plugins in your gulp configuration file.
 
 ```javascript
 var gulp = require('gulp');
