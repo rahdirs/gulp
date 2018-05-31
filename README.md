@@ -1,6 +1,6 @@
 # Gulp
 
-### Gulp Configuration for SCSS
+### Gulp Configuration for SCSS.
 
 1. Open command prompt and Move to app path
 2. Create package.json file by using npm init
