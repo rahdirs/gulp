@@ -121,8 +121,13 @@ gulp.task('watch', function () {
     gulp.watch('js/app.js', gulp.series('js-app'));
 })
 ```
-
 Gulp tasks need to include in gulp watch. Whenever changing the souce files, the watcher will trigger and task will execute.
+
+Comment for running Gulp:
+```
+gulp watch
+```
+
 
 
 ### SCSS folder setup
