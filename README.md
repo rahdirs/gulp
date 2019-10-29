@@ -24,7 +24,7 @@ gulp-strip-comments | Removes comments from JSON, JavaScript, CSS, HTML, etc.
 gulp-plumber | When you are using task runner. if there is an error, that process will be stop, again need to restart. This plumber slove this issue, no need to restart and this return error in console.
 gulp-util |  We can log the error to the terminal
 browser-sync | Live reload the page when you change the configurated gulp files.
-#### npm commmands
+#### npm commands
 ~~~
 npm install gulp-sass --save-dev 
 npm install gulp-minify-css --save-dev 
