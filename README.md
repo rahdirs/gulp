@@ -130,5 +130,5 @@ gulp watch
 
 
 
-### SCSS folder setup
+#### SCSS folder setup
 ![Gulp project folder structure](img/gulp-project-folder-structure.png)
