@@ -123,7 +123,7 @@ gulp.task('watch', function () {
 ```
 Gulp tasks need to include in gulp watch. Whenever changing the souce files, the watcher will trigger and task will execute.
 
-Comment for running Gulp:
+#### Comment for running Gulp:
 ```
 gulp watch
 ```
