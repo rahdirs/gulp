@@ -1,7 +1,7 @@
-# Gulp
+# Gulp Configuration for SCSS.
 
-### Gulp Configuration for SCSS.
-
+### Configuration
+This configuration setup for gulp 4. 
 1. Open command prompt and Move to app path
 2. Create package.json file by using npm init
 3. Install Global gulp:
@@ -48,50 +48,43 @@ npm install gulp --save-dev npm install gulp-sass --save-dev npm install gulp-mi
 
 ### Gulp Configuration
 
-Include the plugins in your gulp configuration file.
+Crate gulpfile.js and Include the plugins in your gulp configuration file.
 
 ```javascript
 var gulp = require('gulp');
+// sass conversion
 var sass = require('gulp-sass');
+// Minify conversion
 var minifyCss = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+// error log
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
-var bs = require('browser-sync').create();
 ```
 
 Create the gulp task for css and javascript files. This task will generated minified files for production.
 
 ```javascript
-gulp.task('css-style', function () {
-  return gulp.src('common/scss/style.scss')
-	 .pipe(plumber({
-		errorHandler: onError
-	 }))
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(gulp.dest('common/css'))
-    .pipe(minifyCss())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(sourcemaps.write('.', {
-      includeContent: false,
-      sourceRoot: 'common/scss/'
-    }))
-    .pipe(gulp.dest('common/css'))
-});
-var onError = function (err) {
-  gutil.beep();
-  console.log(err);
-};
-gulp.task('browser-sync', ['sass_flex'], function() {
-  bs.init({
-      port: 8005,
-      proxy: "localhost:8005" 
-  });
+//CSS file
+gulp.task('css-dashboard', function () {
+    return gulp.src('scss/dashboard.scss')
+        .pipe(plumber({
+            errorHandler: onError
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(sass())
+        .pipe(gulp.dest('css/'))
+        .pipe(minifyCss())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(sourcemaps.write('.', {
+            includeContent: false,
+            sourceRoot: 'scss/'
+        }))
+        .pipe(gulp.dest('css/'))
 });
 ```
 
@@ -99,28 +92,39 @@ The above css task generate both minified and css file. You can change the desti
 browser sync server config and port number we can change.
 
 ```javascript
+//Javascript file
 gulp.task('js-app', function () {
-  gulp.src('common/js/app.js')
-	.pipe(strip())
-    .pipe(rename({
-      basename: 'main'
-    }))
-	.pipe(gulp.dest('common/js/'))
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('common/js/'));
+    return gulp.src('js/app.js')
+        .pipe(plumber({
+            errorHandler: onError
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('js/'));
 });
 ```
 The above javascript task generate minified javascript file.
 
 #### Gulp watch
 ```
-gulp.task('watch',['browser-sync'], function () {
-  gulp.watch('common/scss/style.scss', ['css-style']).on('change', bs.reload);
-  gulp.watch('common/js/app.js', ['js-app']);
+// Error handler
+var onError = function (err) {
+    gutil.beep();
+    console.log(err);
+};
+
+//sass watcher
+gulp.task('watch', function () {
+    gulp.watch('scss/dashboard.scss', gulp.series('css-dashboard'));
+    gulp.watch('js/app.js', gulp.series('js-app'));
 })
 ```
 
 Gulp tasks need to include in gulp watch. Whenever changing the souce files, the watcher will trigger and task will execute.
+
+
+### SCSS folder setup
+![Gulp project folder structure](img/gulp-project-folder-structure.png)

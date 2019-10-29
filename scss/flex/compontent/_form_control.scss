@@ -1,0 +1,80 @@
+.form-container {
+  width: 100%;
+  @include flex;
+  @include flexWrap;
+  padding: 12px;
+
+  label {
+    font-weight: 600;
+    font-size: 16px;
+    color: $font-label;
+    line-height: 30px;
+    padding-right: 12px;
+  }
+
+  .form-group,
+  .form-row,
+  .form-inline {
+    padding-bottom: 16px;
+  }
+}
+
+.form-inline {
+  @include flexInline;
+  @include alignCenter;
+  @include flexDirRow;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-row {
+  @include flexInline;
+  @include flexDirCol;
+  @include alignStart;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-row {
+
+  input[type="text"],
+  input[type="password"],
+  select,
+  input[type="number"],
+  input[type="tel"] {
+    width: 100%;
+  }
+}
+
+.form-group {
+  @include flexInline;
+  @include flexWrap;
+  @include alignCenter;
+}
+
+.asterisk {
+  color: $red !important;
+  font-size: 16px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "*";
+    padding-left: 4px;
+  }
+}
+
+
+@mixin form-label-colon($pad) {
+  label {
+    @include flexInline;
+    @include justifySpaceBetween;
+    @include alignCenter;
+
+    &:after {
+      content: ":";
+      padding-right: $pad;
+      padding-left: $pad
+    }
+  }
+}

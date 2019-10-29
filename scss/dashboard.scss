@@ -1,0 +1,21 @@
+// Main SCSS file
+@import "./flex";
+// Component
+@import "./flex/compontent/button";
+@import "./flex/compontent/table";
+
+// Page wise SCSS 
+.dashboard {
+    .container {
+        width: 400px;
+        border: 1px solid #ddd
+    }
+
+    .table {
+
+        .row>div {
+            width: 50%
+        }
+    }
+
+}

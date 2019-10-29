@@ -1,0 +1,68 @@
+ // Mobile - Ex: iPod, iPhone 4
+ @media only screen and (min-width: 320px) {
+     .mob-view {
+         display: flex !important
+     }
+
+     .tab-view {
+         display: none !important
+     }
+
+     .lap-view {
+         display: none !important
+     }
+
+     .desk-view {
+         display: none !important
+     }
+
+     .mob-tab-view {
+         display: flex !important
+     }
+ }
+
+ // Tab - Ex: iPad
+ @media only screen and (min-width: 768px) {
+     .mob-view {
+         display: none !important
+     }
+
+     .tab-view {
+         display: flex !important
+     }
+
+     .desk-view {
+         display: none !important
+     }
+
+     .lap-view {
+         display: flex !important
+     }
+
+     .mob-tab-view {
+         display: flex !important
+     }
+ }
+
+ // Labtop
+ @media only screen and (min-width: 1024px) {
+     .mob-view {
+         display: none !important
+     }
+
+     .tab-view {
+         display: none !important
+     }
+
+     .lap-view {
+         display: flex !important
+     }
+
+     .desk-view {
+         display: flex !important
+     }
+
+     .mob-tab-view {
+         display: none !important
+     }
+ }

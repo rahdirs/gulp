@@ -1,0 +1,50 @@
+.hide {
+    display: none !important
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.pad {
+    padding: 12px
+}
+
+.mar {
+    margin: 12px
+}
+
+.text-left {
+    text-align: left !important
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.text-right {
+    text-align: right !important
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.word-break {
+    word-break: break-word;
+}
+
+
+// layout
+
+.fixed {
+    position: fixed;
+}
+
+.container {
+    margin: 50px auto;
+    display: flex;
+    max-width: 1024px;
+    height: 100%;
+    flex-direction: column
+}

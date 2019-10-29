@@ -1,0 +1,97 @@
+$rcolor:#1fb9fb;
+
+.radio-group label,
+label.radio-group {
+    cursor: pointer
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    box-shadow: inset 0 0 0 0.45em #fff, 0 0 0 0.3em;
+    border-radius: 50% !important;
+    transition: .2s;
+    cursor: pointer;
+    color: #808080;
+    transition: all 0.15s ease-out 0s;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+input[type="radio"]:hover,
+input[type="radio"]:checked {
+    background: #363945;
+    box-shadow: inset 0 0 0 .6em white, 0 0 0 .3em;
+}
+
+input[type="radio"]:checked {
+    background: $rcolor;
+    box-shadow: inset 0 0 0 .25em white, 0 0 0 .3em $rcolor;
+}
+
+input[type="radio"]:checked::after {
+    -webkit-animation: click-wave 0.25s;
+    -moz-animation: click-wave 0.25s;
+    animation: click-wave 0.25s freeze;
+    background: $rcolor;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+input[type="radio"].radio {
+    border-radius: 50%;
+}
+
+input[type="radio"]::after {
+    border-radius: 50%;
+}
+
+input[type="radio"]:focus {
+    outline: 0;
+}
+
+@keyframes click-wave {
+    0% {
+        height: 15px;
+        width: 15px;
+        opacity: 0.35;
+        margin: 0;
+        position: relative;
+    }
+
+    100% {
+        height: 35px;
+        width: 35px;
+        margin-left: -11px;
+        margin-top: -11px;
+        opacity: 0;
+    }
+}
+
+.form-radio {
+    @include flexInline;
+    width: 100%;
+
+    .radio-group {
+        &:last-child {
+            margin-left: 16px;
+        }
+    }
+}
+
+.form-inline {
+    .radio-group {
+        margin-right: 16px
+    }
+}
+
+.form-row {
+    .radio-group {
+        margin-bottom: 16px
+    }
+}

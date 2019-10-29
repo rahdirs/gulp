@@ -1,0 +1,184 @@
+html,
+body {
+    font-size: 15px;
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    color: #333
+}
+
+body,
+html {
+    background: #fff;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0
+}
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+* {
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 400;
+    padding: 0;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+
+h1,
+h2,
+h2,
+h3,
+h4,
+h5,
+h6,
+aside,
+article,
+details,
+figure,
+footer,
+header,
+nav,
+section,
+hr,
+summary {
+    display: block;
+}
+
+ol,
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    background-color: transparent;
+}
+
+img {
+    border: 0;
+}
+
+a:active,
+a:hover,
+a:focus,
+input:active,
+input:hover,
+input:focus,
+button:active,
+button:hover,
+button:focus,
+.toggle-button:focus,
+.toggle-button:active {
+    outline: 1px solid #333 !important
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+button,
+input {
+    *overflow: visible;
+    line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+label,
+select,
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+textarea {
+    height: auto;
+    overflow: auto;
+    vertical-align: top;
+}
+
+select,
+textarea {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+input[type="number"],
+input[type="tel"] {
+    border: 1px solid #e6e6e6;
+    height: 42px;
+    padding: 0px 10px;
+    font-size: 16px;
+}

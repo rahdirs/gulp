@@ -1,0 +1,18 @@
+// Minin, reset, and common
+@import "./flex/mixin";
+@import "./flex/normalize";
+@import "./flex/common";
+//layout
+@import "./flex/layout/visible";
+@import "./flex/layout/layout";
+
+//compontent 
+// Register all components here and import the compontent in pagewise 
+// @import "./flex/compontent/list";
+// @import "./flex/compontent/form_control";
+// @import "./flex/compontent/button";
+// @import "./flex/compontent/button_group";
+// @import "./flex/compontent/table";
+// @import "./flex/compontent/checkbox";
+// @import "./flex/compontent/radio";
+// @import "./flex/compontent/card";

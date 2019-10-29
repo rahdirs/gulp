@@ -1,0 +1,139 @@
+@mixin flex {
+    // display: -webkit-flex;
+    /* Safari */
+    display: flex;
+}
+
+@mixin flexVal($val) {
+    // -webkit-flex: $val;
+    /* Safari */
+    flex: $val;
+}
+
+@mixin flexInline {
+    // display: -webkit-inline-flex;
+    /* Safari */
+    display: inline-flex;
+}
+
+@mixin alignStart {
+    // -webkit-align-items: flex-start;
+    /* Safari */
+    align-items: flex-start;
+}
+
+@mixin alignEnd {
+    // -webkit-align-items: flex-end;
+    /* Safari */
+    align-items: flex-end;
+}
+
+@mixin alignCenter {
+    // -webkit-align-items: center;
+    /* Safari */
+    align-items: center;
+}
+
+@mixin alignBase {
+    // -webkit-align-items: baseline;
+    /* Safari */
+    align-items: baseline;
+}
+
+@mixin justifyStart {
+    // -webkit-justify-content: flex-start;
+    /* Safari */
+    justify-content: flex-start;
+}
+
+@mixin justifyCenter {
+    // -webkit-justify-content: center;
+    /* Safari */
+    justify-content: center;
+}
+
+@mixin justifyEnd {
+    // -webkit-justify-content: flex-end;
+    /* Safari */
+    justify-content: flex-end;
+}
+
+@mixin justifySpaceBetween {
+    // -webkit-justify-content: space-between;
+    /* Safari */
+    justify-content: space-between;
+}
+
+@mixin justifySpaceAround {
+    // -webkit-justify-content: space-around;
+    /* Safari */
+    justify-content: space-around;
+}
+
+@mixin flexWrap {
+    // -webkit-flex-wrap: wrap;
+    /* Safari 6.1+ */
+    flex-wrap: wrap;
+}
+
+@mixin flexNoWrap {
+    // -webkit-flex-wrap: nowrap;
+    /* Safari 6.1+ */
+    flex-wrap: nowrap;
+}
+
+@mixin alignSelfStart {
+    // -webkit-align-self: flex-start;
+    /* Safari 7.0+ */
+    align-self: flex-start;
+}
+
+@mixin alignSelfEnd {
+    // -webkit-align-self: flex-end;
+    /* Safari 7.0+ */
+    align-self: flex-end;
+}
+
+@mixin alignSelfCenter {
+    // -webkit-align-self: center;
+    /* Safari 7.0+ */
+    align-self: center;
+}
+
+@mixin alignSelfStretch {
+    // -webkit-align-self: stretch;
+    /* Safari 7.0+ */
+    align-self: stretch;
+}
+
+@mixin flexDirCol {
+    // -webkit-flex-direction: column;
+    /* Safari */
+    flex-direction: column;
+}
+
+@mixin flexDirRow {
+    // -webkit-flex-direction: row;
+    /* Safari */
+    flex-direction: row;
+}
+
+@mixin flexGrow($val) {
+    // -webkit-flex-grow: $val;
+    /* Safari */
+    flex-grow: $val;
+}
+
+@mixin flexBasis($val) {
+    // -webkit-flex-basis: $val;
+    /* Safari */
+    flex-basis: $val;
+}
+
+@mixin order($val) {
+    // -webkit-order: $val;
+    /* Safari */
+    order: $val;
+}
+
+

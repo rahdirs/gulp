@@ -1,0 +1,79 @@
+// styles
+.btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    height: 36px;
+    min-width: 70px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+// Sizes
+.btn-s {
+    min-width: 75px;
+}
+
+.btn-m {
+    min-width: 250px;
+    height: 40px;
+}
+
+.btn-l {
+    min-width: 350px;
+}
+
+// Button colors
+.btn-dark {
+    background-color: #000;
+    color: #ffffff;
+    border-width: 0px;
+}
+
+.btn-red {
+    background-color: #ff5454;
+    color: #ffffff;
+    border-width: 0px;
+}
+
+.btn-default {
+    background-color: #fff;
+    color: #000;
+    border-width: 0px;
+    border-radius: 2px;
+    border: 1px solid #ddd
+}
+
+// disbale
+.btn[disabled] {
+    background: #ddd !important;
+}
+
+.btn.disabled {
+    background: #ddd !important;
+    color: #333;
+    cursor: not-allowed;
+}
+
+// button press animation
+@mixin btn-animation {
+    .btn:active {
+        box-shadow: 0 3px #666;
+        transform: translateY(4px);
+        -webkit-tap-highlight-color: transparent;
+        transition: all 0.1s;
+        outline: 1px solid #ffce54 !important;
+    }
+}
